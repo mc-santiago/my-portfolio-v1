@@ -1,20 +1,80 @@
 html, body {
-    height: 100%;
+    height: 100vh;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
   }
   
 .section {
   height: 100%;
 }
 
+/* Background look for all pages*/
+#homeSec {
+  /* background-image: url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg') */
+  /* background-image: url('https://i.postimg.cc/J4Xy3vzR/autumn-2918906-1280.jpg'); */
+  /* background-image: url('https://i.postimg.cc/G2Wjzf6G/background-1747785-1280.jpg'); */
+  background-image: url('https://i.postimg.cc/J0wXDpTn/data-4180250-1280.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+#home {
+  padding-top: 8vh;
+}
+#webDevJourney {
+  padding-top: 8vh;
+  background-color: rgb(0,0,0,0.9);
+  color: white;
+}
+#background {
+  padding-top: 8vh;
+  background-image: url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+}
+#projects {
+  padding-top: 8vh;
+}
+#contactMe {
+  padding-top: 8vh;
+}
+
+/* Transparent Box w/Text */
+.transbox {
+  margin: 60px 200px;
+  background-color: rgb(121, 32, 121, 0.85);
+  border: 2px solid black;
+  box-shadow: 0 2px 10px 1px rgb(200, 247, 247);
+}
+
+.transbox p {
+  margin: 7%;
+  font-family: 'Exo 2', sans-serif;
+  text-shadow: 0px 0px 1px rgb(200, 247, 247);
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.transbox h2 {
+  text-align: center;
+}
+
+/* NavBar */
 nav {
+  z-index: 10000;
+  position: fixed;
+  top: 0px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  height: 8vh;
   background-color: rgb(121, 32, 121);
   font-family: 'Exo 2', sans-serif;
+  /* -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999; */
+  box-shadow: 0 2px 20px 1px rgb(200, 247, 247);
 }
 
 .logo {
@@ -25,19 +85,36 @@ nav {
   font-size: 20px;
   margin-left: 1%; 
 }
-
+/* To display items in list one beside the other */
 .nav-links {
   display: flex;
   justify-content: space-around;
   width: 48%;
 }
-.nav-links li{
+/* To get rid of the bullet points on the navbar/list */
+.nav-links  li{
   list-style: none;
 }
 
-.nav-links a{
+/* To get rid of the line on the text in navbar and more  */
+
+.nav-links a {
+  /* float: left; */
+  display: block;
   color: rgb(230, 214, 228);
+  text-align: center;
+  padding: 18px 10px;
+  text-decoration: none;
   font-size: 14px;
+}
+
+.nav-links a:hover {
+  background: #ddd;
+  color: black;
+}
+.nav-links a:active {
+  background: #ddd;
+  color: black;
 }
 
 .burger{
@@ -63,11 +140,14 @@ nav {
   body {
     overflow-x: hidden;
   }
+  .transbox {
+    margin: 60px 50px;
+  }
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 90vh;
-    width: 35vw;
+    height: 90.5vh;
+    width: 100vw;
     top: 6vh;
     background-color: rgb(121, 32, 121);
     display: flex;
@@ -78,6 +158,11 @@ nav {
   }
   .nav-links li {
     opacity: 0;
+  }
+  .nav-links a {
+    /* display: block; */
+    padding: 5vh 5vw;
+    font-size: 17px;
   }
   .burger {
     display: block;
@@ -103,6 +188,7 @@ nav {
   }
 }
 
+/* Turn burger lines into an X */
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -112,3 +198,4 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
