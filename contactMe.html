@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="https://i.postimg.cc/QtXQ5c08/Hi.png" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+  <script src="https://kit.fontawesome.com/b1a8a7536f.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
   <title>mc-santiago</title>
 </head>
 
 <body>
-    <div class='section contactMe' id='contactMe'>
+    <section id='contactMe'>
+<!-- NAVBAR ---------------------------------------------------------------->
         <nav>
-            <div class='logo'>
-                Maria del Carmen Santiago
-            </div>
-    
+            <div class='logo'>Maria del Carmen Santiago</div>
             <ul class='nav-links'>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="webDevJourney.html">Web Dev Journey</a></li>
@@ -23,26 +22,76 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contactMe.html">Contact Me</a></li>
             </ul>
-    
             <div class='burger'>
                 <div class='line1'></div>
                 <div class='line2'></div>
                 <div class='line3'></div>
             </div>
         </nav>
-
-        <div class="split left">
-            <div class="centered">
-                <p>my contact info</p>
-            </div>
-        </div>
+<!-- CONTACT FORM & INFO (ALL) --------------------------------------------->
+        <h1 class="tittleContactMe">Contact Me</h1>
         
-        <div class="slip right">
-            <div class="centered">
-                <p>form here</p>
-            </div>
-        </div>
-    </div>
+        <div class="wrapper">
+<!-- CONTACT PAGE LEFT (INFO) ----------------------------------------------> 
+            <div class="myInfo">
+			    <h3>MY CONTACT INFORMATION</h3>
+			    <ul>
+                    <li><i class="fa fa-road"></i> Madrid, Spain 28012</li>
+                    <li><i class="fa fa-phone"></i> (+34) 694 43 64 41</li>
+                    <li><i class="fa fa-envelope"></i> mari.c.santiago@europe.com</li>
+                </ul>
+<!-- CONTACT PAGE LEFT (SOCIAL MEDIA) --------------------------------------> 
+                <hr>
+                    <ul class="socialMediaList">
+                        <li><a href="https://twitter.com/maricstgo" target="_blank" class="socialMedia-icon">
+                            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://github.com/mc-santiago/" target="_blank" class="socialMedia-icon">
+                            <i class="fab fa-github fa-2x " aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="www.linkedin.com/in/mc-santiago" target="_blank" class="socialMedia-icon">
+                            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                <hr>
+            </div> 
+<!-- CONTACT PAGE RIGHT (FORM) ---------------------------------------------> 
+            <!-- <div class="contactFormDiv">
+                <h3>Contact Form</h3> -->
+                <form class="contactForm">
+                    <p>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </p>
+                    <p>
+                        <label>Company</label>
+                        <input type="text" name="company" id="company">
+                    </p>
+                    <p>
+                        <label>E-mail Address</label>
+                        <input type="email" name="email" id="email" required>
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </p>
+
+                    <p class="full">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" id="message"></textarea>
+                    </p>
+
+                    <p class="full">
+                        <button type="submit">Submit</button>
+                    </p>
+
+                </form>
+            <!-- </div> -->
+<!-- CONTACT PAGE RIGHT ( SOCIAL MEDIA INFO) ------------------------------->
+            </div>      
+                
+            
+        </section>
 
 <script src="app.js"></script>
 
