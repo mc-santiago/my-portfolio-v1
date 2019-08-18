@@ -57,7 +57,7 @@
 <!-- CONTACT PAGE RIGHT (FORM) ---------------------------------------------> 
             <form class="contactForm" method="POST" data-netlify="true">
                 <p>
-                    <label>Name</label>
+                    <label>Name *</label>
                     <input type="text" name="name" id="name" required>
                 </p>
                 <p>
@@ -65,7 +65,7 @@
                     <input type="text" name="company" id="company">
                 </p>
                 <p>
-                    <label>E-mail Address</label>
+                    <label>E-mail Address *</label>
                     <input type="email" name="email" id="email" required>
                 </p>
                 <p>
@@ -80,9 +80,9 @@
                     <label>Upload File</label>
                     <input type="file" name="myfile" id="myfile" placeholder="Upload File">
                 </p>
-                <p>
-                    <div data-netlify-recatcha="true"></div>    
                 </p>
+                    <div data-netlify-recaptcha="true"></div>
+                <p>  
                 <p class="full">
                     <button type="submit" class="button">Send Email</button>
                 </p>
