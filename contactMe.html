@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="https://i.postimg.cc/QtXQ5c08/Hi.png" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
   <script src="https://kit.fontawesome.com/b1a8a7536f.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
   <title>mc-santiago</title>
@@ -29,14 +28,14 @@
             </div>
         </nav>
 <!-- CONTACT FORM & INFO (ALL) --------------------------------------------->
-        <h1 class="tittleContactMe">Contact Me</h1>
+        <h1 class="tittle">Contact Me</h1>
         
         <div class="wrapper">
 <!-- CONTACT PAGE LEFT (INFO) ----------------------------------------------> 
             <div class="myInfo">
 			    <h3>MY CONTACT INFORMATION</h3>
 			    <ul>
-                    <li><i class="fa fa-road"></i> Madrid, Spain 28012</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Madrid, Spain 28012</li>
                     <li><i class="fa fa-phone"></i> (+34) 694 43 64 41</li>
                     <li><i class="fa fa-envelope"></i> mari.c.santiago@europe.com</li>
                 </ul>
@@ -49,44 +48,45 @@
                         <li><a href="https://github.com/mc-santiago/" target="_blank" class="socialMedia-icon">
                             <i class="fab fa-github fa-2x " aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="www.linkedin.com/in/mc-santiago" target="_blank" class="socialMedia-icon">
+                        <li><a href="https://www.linkedin.com/in/mc-santiago" target="_blank" class="socialMedia-icon">
                             <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 <hr>
             </div> 
 <!-- CONTACT PAGE RIGHT (FORM) ---------------------------------------------> 
-            <!-- <div class="contactFormDiv">
-                <h3>Contact Form</h3> -->
-                <form class="contactForm">
-                    <p>
-                        <label>Name</label>
-                        <input type="text" name="name" id="name" required>
-                    </p>
-                    <p>
-                        <label>Company</label>
-                        <input type="text" name="company" id="company">
-                    </p>
-                    <p>
-                        <label>E-mail Address</label>
-                        <input type="email" name="email" id="email" required>
-                    </p>
-                    <p>
-                        <label>Phone Number</label>
-                        <input type="text" name="phone" id="phone">
-                    </p>
-
-                    <p class="full">
-                        <label>Message</label>
-                        <textarea name="message" rows="5" id="message"></textarea>
-                    </p>
-
-                    <p class="full">
-                        <button type="submit">Submit</button>
-                    </p>
-
-                </form>
-            <!-- </div> -->
+            <form class="contactForm" method="POST" data-netlify="true">
+                <p>
+                    <label>Name</label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                    <label>Company</label>
+                    <input type="text" name="company" id="company">
+                </p>
+                <p>
+                    <label>E-mail Address</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                    <label>Phone Number</label>
+                    <input type="text" name="phone" id="phone">
+                </p>
+                <p class="full">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" id="message" required></textarea>
+                </p>
+                <p>
+                    <label>Upload File</label>
+                    <input type="file" name="myfile" id="myfile" placeholder="Upload File">
+                </p>
+                <p>
+                    <div data-netlify-recatcha="true"></div>    
+                </p>
+                <p class="full">
+                    <button type="submit" class="button">Send Email</button>
+                </p>
+            </form>
 <!-- CONTACT PAGE RIGHT ( SOCIAL MEDIA INFO) ------------------------------->
             </div>      
                 

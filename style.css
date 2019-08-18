@@ -1,12 +1,11 @@
 body, html {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Exo 2', sans-serif;
-    height: 100%;
-    background-color: black;
-    padding-top: 30px;
-  }
+  margin: 0px;
+  padding: 30px 0px 0px 0px;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+  height: 100%;
+  background-color: black;
+}
   
 section {
   height: 100%;
@@ -20,6 +19,7 @@ section {
   background-size: cover;
   background-position: center center;
   opacity: 0.9;
+  min-height: 500px;
 }
 
 .picMe {
@@ -33,14 +33,18 @@ section {
 }
 
 /* Transparent Box w/Text */
+
 .transbox {
   max-width: 725px;
   min-width: 190px;
-  margin: auto;
   background-color: rgba(231, 218, 231, 0.85);
   border: 2px solid rgb(190, 115, 190);
+  border-radius: 6px;
   box-shadow: 0 2px 15px 5px rgb(182, 134, 182);
-  transform: translateY(120px)
+  margin: auto; 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .transbox p {
@@ -60,163 +64,145 @@ section {
 }
 
 @media screen and (max-width: 768px){
+  #homeSec {
+    min-height: 575px;
+  }
   .transbox {
-    transform: translateY(80px);
-   margin: 0 15px;
+   margin: 0 20px;
   }
 }
 
 /* -------------------------- webDevJourney Section ------------------------------ */
 #webDevJourney {
-  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.185));
-  overflow-x: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))
+                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+  background-size: cover;
+  background-position: center center; 
+  min-height: 590px;
 }
+
+.webDevWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  margin: auto; 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .webDev {
+  margin: auto;
   padding: 2% 4% 4% 4%;
-  width: 50%;
-  animation-name: position1;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  position: absolute;
+  height: 450px;
+  width: 350px;
 }
-@keyframes position1 {
-  0% {
-    transform: translateX(-100%) translateY(-100%);
-  }
-  100% {
-    transform: translateX(5%) translateY(50px);
-  }
-}
+
 .twitter-timeline {
-  border: 2px solid rgb(43, 2, 43);
+  border: 2px solid rgb(190, 115, 190)!important;
+  border-radius: 6px;
   box-shadow: 0 2px 15px 5px rgb(182, 134, 182);
-  animation-name: positionTwitter;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  position: absolute;
+  margin: auto !important;
+  height: 475px !important;
+  width: 350px !important;
 }
-@keyframes positionTwitter {
-  0% {
-    transform: translateX(200%) translateY(200px);
-  }
-  100% {
-    transform: translateX(140%) translateY(250px);
-  }
-}
+
 @media screen and (max-width: 950px){
+  #webDevJourney {
+    min-height: 900px ;
+  }
+  .webDevWrapper{
+  display: grid;
+  grid-template-columns: none;
+  grid-row-gap: 35px;
+  justify-items: center;
+}
+
   .webDev {
-    width: 40%;
-    margin: auto;
-    margin-bottom: 10%;
+    padding: 2% 4% 4% 4%;
+    height: auto;
+    max-width: 550px;
   }
-  @keyframes position1 {
-    0% {
-      transform: translateX(0%) translateY(-100%);
-    }
-    100% {
-      transform: translateX(5%) translateY(50px);
-    }
-  }
-  @keyframes positionTwitter {
-    0% {
-      transform: translateX(0%) translateY(-100%);
-    }
-    100% {
-      transform: translateX(145%) translateY(150px);
-    }
+  
+  .twitter-timeline {
+    height: 300px !important;
+    width: 400px !important;
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 460px){
+  #webDevJourney {
+    min-height: 1500px ;
+  }
+  .webDevWrapper{
+  display: grid;
+  grid-template-columns: none;
+  grid-row-gap: 35px;
+  justify-items: center;
+}
+
   .webDev {
+    padding: 2% 4% 4% 4%;
+    height: auto;
     width: 200px;
-    margin: auto;
-    margin-bottom: 0%;
-    position: relative;
   }
-  @keyframes position1 {
-    0% {
-      transform: translateX(100%) translateY(-100%);
-    }
-    100% {
-      transform: translateX(15px) translateY(30px);
-
-    }
-  }
-  .twitter-timeline{
-    position: relative;
-    margin-bottom: 20px;
-    float: right;
-    animation-duration: 5s;
-  }
-  @keyframes positionTwitter {
-    0% {
-      transform: translateX(100%) translateY(-400%);
-    }
-    100% {
-      transform: translateX(-8%) translateY(0%);
-      margin-bottom: 20px;
-    }
+  
+  .twitter-timeline {
+    height: 550px !important;
+    width: 240px !important;
   }
 }
-
 /* ------------------------- Background Section -------------------------- */
 #background {
   background-image: linear-gradient(rgba(233, 240, 239, 0.9), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.9))
                   , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center center; 
+  min-height: 600px;
 }
 
+@media screen and (max-width: 768px){
+  #background{
+    min-height: 1400px;
+  }
+  .transbox {
+   margin: 0 15px;
+  }
+}
+
+
 /* --------------------------- Projects Section -------------------------- */
-/* #projects {
-  padding-top: 8vh;
-} */
+#projects {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9))
+                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+  background-size: cover;
+  background-position: center center; 
+  min-height: 600px;
+} 
 
 /* ------------------------- contactMe Section --------------------------- */
 
-/* @import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300'); */
-
-/* ------------- */
-/* GLOBAL STYLES */
-/* ------------- */
-
-/* * {
-  box-sizing: border-box;
-}
-
-body {
-  background: #3952a3;
-  color: #485e74;
-  line-height: 1.6;
-  font-family: 'Yantramanav', sans-serif;
-  padding: 1em;
-} */
-
-/* .contactMe {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-} */
-
 #contactMe {
-  background-image: url("https://i.postimg.cc/j2RLN0MB/background-1716728-1280.jpg");
+  background-image: linear-gradient(rgba(233, 240, 239, 0.9), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.9))
+                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
   background-size: cover;
   background-position: center center;
-  opacity: 0.9;
+  min-height: 750px;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
 
-.tittleContactMe {
+.tittle {
   text-align: center;
 	font-weight: 1000;
 	text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #ffffff;
+  color: rgb(121, 32, 121);
+  text-shadow: 1px 1px darkslategrey;
+  padding-top: 20px;
 }
 
 .wrapper {
@@ -231,6 +217,7 @@ ul {
 
 .myInfo {
   background: grey;
+  opacity: 0.85;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 5%;
@@ -239,6 +226,7 @@ ul {
 .myInfo h3, .myInfo ul {
   text-align: center;
   margin: 1rem 0 1rem 0;
+  text-shadow: 1px 1px darkslategrey;
 }
 
 .myInfo .socialMediaList {
@@ -247,8 +235,7 @@ ul {
   align-items: center;
 }
 
-.fa {
-  /* Default color for undefined */
+.fa, .fas {
   color: rgb(121, 32, 121);
   padding-right: 5px;
 }
@@ -271,10 +258,10 @@ ul {
   transition: transform 2s;
 }
 
-/* form */
+/* CONTACT FORM */
 
 .contactForm {
-  background-color: rgb(231, 218, 231);
+  background-color: rgba(231, 218, 231, 0.85);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   display: grid;
@@ -283,10 +270,6 @@ ul {
   margin: auto;
   padding: 5%;
 }
-
-/* .contactForm label {
-  display: block;
-} */
 
 .contactForm p {
   margin: 0;
@@ -313,6 +296,7 @@ ul {
   background: rgb(121, 32, 121);
   border: 0;
   color: rgb(231, 218, 231);
+  text-shadow: 1px 1px rgb(194, 146, 194);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
@@ -320,23 +304,24 @@ ul {
 
 .contactForm button:hover,
 .contactForm button:focus {
-  background: rgb(194, 146, 194);
+  background: rgba(194, 146, 194, 0.5);
   color: rgb(121, 32, 121);
+  text-shadow: 1px 1px rgb(194, 146, 194);
+  border: solid 1px rgb(121, 32, 121);
   outline: 0;
-  transition: background-color 1s ease-out;
+  transition: background-color 2s ease-out;
 }
 
 
 @media only screen and (min-width: 700px) {
+  #contactMe {
+    min-height: 525px;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-content: center;
   }
-
-  /* .wrapper > * {
-    padding: 2em;
-  } */
 
   .myInfo {
     border-radius: 4px 0 0 4px;
@@ -417,12 +402,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* @media screen and (max-width: 950px){
-  .nav-links {
-    width: 50%;
-  }
-} */
-
 @media screen and (max-width: 950px){
   body {
     overflow-x: hidden;
@@ -431,7 +410,7 @@ nav {
     position: absolute;
     right: 0px;
     height: 300px;
-    width: 150px;
+    width: 200px;
     top: 45px;
     background-color: rgb(121, 32, 121);
     display: flex;
@@ -452,7 +431,7 @@ nav {
     background: none;
     color: black;
     text-shadow: 1px 1px grey;
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
   .burger {
     display: block;
