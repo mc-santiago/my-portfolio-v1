@@ -12,10 +12,20 @@ section {
   width: 100%;
 }
 
+.tittle {
+  text-align: center;
+	font-weight: 1000;
+	text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgb(121, 32, 121);
+  text-shadow: 1px 1px darkslategrey;
+  padding-top: 20px;
+}
+
 /* ------------------------------- Home Section ---------------------------------- */
 #homeSec {
-  background-image: linear-gradient(rgba(233, 240, 239, 0.7), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.7))
-    , url('https://i.postimg.cc/J0wXDpTn/data-4180250-1280.jpg');
+  background-image: linear-gradient(rgba(233, 240, 239, 0.9), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.9))
+                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
   background-size: cover;
   background-position: center center;
   opacity: 0.9;
@@ -180,6 +190,46 @@ section {
   min-height: 600px;
 } 
 
+.tittle.projects {
+  text-shadow: 1px 1px rgb(219, 177, 219);
+}
+
+.wrapperProjects {
+  max-width: 1200px;
+  min-width: 500px;
+  margin: auto;
+}
+.wrapperGiphy {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 25px;
+  /* justify-content: space-around; */
+}
+.giphy {
+  background-color: rgba(231, 218, 231, 0.85);
+  border: 2px solid rgb(190, 115, 190);
+  border-radius: 6px;
+  box-shadow: 0 2px 15px 5px rgb(182, 134, 182);
+  margin: 30px;
+  flex: 1;
+  /* width: calc((100%/3)-20px); */
+  padding: 0px 5px 10px 5px;
+  text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+  #projects {
+    min-height: 850px;
+  }
+}
+
+@media (max-width: 850px) {
+  #projects {
+    min-height: 1300px;
+  }
+}
+
 /* ------------------------- contactMe Section --------------------------- */
 
 #contactMe {
@@ -187,7 +237,7 @@ section {
                   , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
   background-size: cover;
   background-position: center center;
-  min-height: 750px;
+  min-height: 950px;
 }
 
 ul {
@@ -315,7 +365,7 @@ ul {
 
 @media only screen and (min-width: 700px) {
   #contactMe {
-    min-height: 525px;
+    min-height: 675px;
   }
   .wrapper {
     display: grid;
