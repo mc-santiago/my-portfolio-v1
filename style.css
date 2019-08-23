@@ -1,6 +1,8 @@
 body, html {
   margin: 0px;
   padding: 30px 0px 0px 0px;
+  display:flex; 
+  flex-direction:column; 
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
   height: 100%;
@@ -29,7 +31,7 @@ section {
   background-size: cover;
   background-position: center center;
   opacity: 0.9;
-  min-height: 500px;
+  min-height: 400px;
 }
 
 .picMe {
@@ -75,7 +77,7 @@ section {
 
 @media screen and (max-width: 768px){
   #homeSec {
-    min-height: 575px;
+    min-height: 600px;
   }
   .transbox {
    margin: 0 20px;
@@ -96,6 +98,7 @@ section {
   grid-template-columns: 1fr 1fr;
   align-content: center;
   margin: auto; 
+  padding: 0 10%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -302,6 +305,10 @@ ul {
   text-shadow: 1px 1px whitesmoke;
   color: #55acee;
 }
+.fa-at {
+  text-shadow: 1px 1px whitesmoke;
+  color: grey;
+}
 
 .socialMedia-icon i:hover{
   transform: scale(1.4);
@@ -407,18 +414,16 @@ nav {
   font-size: 20px;
   margin-left: 1%; 
 }
-/* To display items in list one beside the other */
+
 .nav-links {
   display: flex;
   justify-content: space-around;
   width: 48%;
 }
-/* To get rid of the bullet points on the navbar/list */
+
 .nav-links  li{
   list-style: none;
 }
-
-/* To get rid of the line on the text in navbar and more  */
 
 .nav-links a {
   /* float: left; */
@@ -516,4 +521,47 @@ nav {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ------------------------- footer Section --------------------------- */
+
+.footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  margin-top:auto; 
+  display: block;
+  justify-content: space-between;
+  background-color: rgb(171, 82, 171);
+  color: whitesmoke;
+  font-family: 'Exo 2', sans-serif;
+  box-shadow: 0 2px 20px 1px rgb(200, 247, 247);
+}
+
+.footerStart {
+  color: rgb(230, 214, 228);
+  text-transform: uppercase;
+  text-shadow: 0px 0px 3px rgb(200, 147, 200);
+  letter-spacing: 4px;
+}
+
+footer .aroundTheWeb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+footer .socialMedia-icon i {
+  border: 1px solid rgb(200, 147, 200);
+  border-radius: 50%;
+  margin: 0 10px;
+  padding: 7px;
+  background-color: rgb(230, 214, 228);
+}
+
+.footerEnd {
+  background-color: rgb(121, 32, 121);
+  padding: 10px;
 }
