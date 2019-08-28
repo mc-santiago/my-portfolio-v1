@@ -12,7 +12,7 @@
 <body>
     <section id='contactMe'>
 <!-- NAVBAR ---------------------------------------------------------------->
-        <nav>
+        <nav class="darkShadow">
             <div class='logo'>Maria del Carmen Santiago</div>
             <ul class='nav-links'>
                 <li><a href="index.html">Home</a></li>
@@ -56,19 +56,19 @@
             </div> 
 <!-- CONTACT PAGE RIGHT (FORM) ---------------------------------------------> 
             <form class="contactForm" method="POST" data-netlify="true">
-                <p>
+                <p class="left">
                     <label>Name *</label>
                     <input type="text" name="name" id="name" required>
                 </p>
-                <p>
+                <p class="right">
                     <label>Company</label>
                     <input type="text" name="company" id="company">
                 </p>
-                <p>
+                <p class="left">
                     <label>E-mail Address *</label>
                     <input type="email" name="email" id="email" required>
                 </p>
-                <p>
+                <p class="right">
                     <label>Phone Number</label>
                     <input type="text" name="phone" id="phone">
                 </p>
@@ -76,13 +76,13 @@
                     <label>Message *</label>
                     <textarea name="message" rows="3" id="message" required></textarea>
                 </p>
-                <!-- <p> -->
+                <p class="left">
                     <!-- <label>Upload File</label> -->
                     <input type="file" name="myfile" id="myfile" placeholder="Upload File">
-                <!-- </p> -->
                 </p>
-                    <div data-netlify-recaptcha="true"></div>
-                <p>  
+                <p class="right">
+                    <div data-netlify-recaptcha="true"></div> 
+                </p>
                 <p class="full">
                     <button type="submit" class="button">Send Email</button>
                 </p>
