@@ -85,10 +85,6 @@ section {
   #homeSec {
     min-height: 600px;
   }
-  .transbox {
-   margin: 0 20px;
-   max-width: 400px;
-  }
   .picMe {
     inline-size: 100px;
   }
