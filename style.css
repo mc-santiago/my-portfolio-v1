@@ -6,8 +6,9 @@ body, html {
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
   height: 100%;
+  width: auto;
   background-color: rgba(49, 4, 49, 0.5);
-  background-image: 'images/abstract-purple-background.jpg';
+  background-image: url('images/abstract-purple-background.jpg');
 }
   
 section {
@@ -25,13 +26,13 @@ section {
   padding-top: 20px;
 }
 
-/* ------------------------------- Home Section ---------------------------------- */
+/* ------------------------------- Home (index.html) Section ---------------------------------- */
 #homeSec {
   display: flex;
   align-content: center;
   align-items: center;
   background-image: linear-gradient(rgba(233, 240, 239, 0.9), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.9))
-                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+                  , url('images/abstract-purple-background.jpg');
   background-size: cover;
   background-position: center center;
   opacity: 0.9;
@@ -86,6 +87,10 @@ section {
   }
   .transbox {
    margin: 0 20px;
+   max-width: 400px;
+  }
+  .picMe {
+    inline-size: 100px;
   }
 }
 
@@ -95,7 +100,7 @@ section {
   align-content: center;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))
-                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+                  , url('images/abstract-purple-background.jpg');
   background-size: cover;
   background-position: center center; 
   min-height: 590px;
@@ -173,7 +178,7 @@ section {
   align-content: center;
   align-items: center; 
   background-image: linear-gradient(rgba(233, 240, 239, 0.9), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.9))
-                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+                  , url('images/abstract-purple-background.jpg');
   background-size: cover;
   background-position: center center; 
   min-height: 600px;
@@ -181,7 +186,7 @@ section {
 
 @media screen and (max-width: 768px){
   #background{
-    min-height: 1400px;
+    min-height: 1000px;
   }
   .transbox {
    margin: 0 15px;
@@ -192,7 +197,7 @@ section {
 /* --------------------------- Projects Section -------------------------- */
 #projects {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9))
-                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+                  , url('images/abstract-purple-background.jpg');
   background-size: cover;
   background-position: center center; 
   min-height: 1000px;
@@ -261,13 +266,26 @@ section {
   #projects {
     min-height: 1900px;
   }
+  .wrapperProjects {
+    max-width: 1200px;
+    min-width: 100px;
+    margin: auto;
+  }
+  .giphy{
+    margin: 10px 0;
+  }
+}
+@media (max-width: 665px) {
+.wrapperGiphy {
+  margin: 15px 5px;
+}
 }
 
 /* ------------------------- contactMe Section --------------------------- */
 
 #contactMe {
   background-image: linear-gradient(rgba(233, 240, 239, 0.9), rgba(233, 240, 239, 0.2), rgba(233, 240, 239, 0.9))
-                  , url('https://i.postimg.cc/gJSWZzZN/abstraction-3527172-1280.jpg');
+                  , url('images/abstract-purple-background.jpg');
   background-size: cover;
   background-position: center center;
   min-height: 950px;
